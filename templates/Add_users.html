@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block body %} 
+
+<form method="POST" action="/Add_users" >
+{% csrf_token %}
+    <div class="container justify-content-center py-3" style="width: 450px;">
+        <div class="form-group py-3">
+            <label for="account_number">Account Number</label>
+            <input type="integer" class="form-control py-2" name="account_number" placeholder="Enter Your Account Number">
+        </div>
+        <div class="form-group py-3">
+            <label for="name">Name</label>
+            <input type="text" class="form-control py-2" name="name" placeholder="Enter Name">
+        </div>
+        <div class="form-group py-3">
+            <label for="phone_number">Phone Number</label>
+            <input type="phone" class="form-control py-2" name="phone_number" placeholder="Enter Phone Number">
+        </div>
+        <div class="form-group py-3">
+            <label for="balance">Account Balance</label>
+            <input type="float" class="form-control py-2" name="balance" placeholder="Enter Account Balance">
+        </div>
+        <button type="submit" class="btn btn-primary d-grid gap-2 col-6 mx-auto">Submit</button>
+    </div>
+</form>
+{% endblock body %}
+

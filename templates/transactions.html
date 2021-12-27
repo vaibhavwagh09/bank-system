@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+{% load static %}
+<form method="post">
+    <div class="table-responsive row justify-content-center">
+            {% csrf_token %}
+            <table class="table table-dark table-striped " style="width:50%; margin: 20px;">
+                <thead>
+                    <tr>
+                        <th scope="col" id="id">SR. No.</th>
+                        <th scope="col">From</th>
+                        <th scope="col">To</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Time</th>
+                        
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                {% for Transfer in transactions %}
+                    <tr>
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <th>{{Transfer.from_cust}}</th> 
+                        <td>{{Transfer.to_cust}}</td>
+                        <td>{{Transfer.cust_amount}}</td>
+                        <td>{{Transfer.date}}</td>
+                        <td>{{Transfer.time}}</td>
+                        
+                    </tr>
+
+                {% endfor %}
+                </tbody>
+            </table>
+    
+
+        
+    </div>
+</form>
+{% endblock body%}

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block body %} 
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://source.unsplash.com/1600x600/?bank,bank" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://source.unsplash.com/1600x600/?cash,bank" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://source.unsplash.com/1600x600/?loan,bank" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+  <div class="container" style=" background-color: rgb(90, 155, 175); width: 600px; height:auto; margin-top: 20px; margin-bottom: 20px ;border-radius:10px; align-content: center; text-align: center;">
+      <div class="row row-cols-2 row-cols-md-4">
+        <div class="card m-4"`> 
+          
+          <img src="/static/transaction_logo.png" class="card-img-center" alt="...">
+          <div class="card-body">
+            <a href="/transactions">
+            <p class="card-text">Transaction</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="card m-4">
+            <img src="/static/users.png" class="card-img-center" alt="...">
+            <div class="card-body">
+              <a href="/users">
+              <p class="card-text">Users</p>
+              </a>
+            </div>
+        </div>
+        
+        <div class="card m-4">
+          <img src="/static/add_user.png" class="card-img-center" alt="...">
+          <div class="card-body">
+            <a href="/Add_users">
+            <p class="card-text">Add Users</p>
+            </a>
+          </div>
+        </div>
+      </div>
+  
+  </div>  
+{% endblock body %}
